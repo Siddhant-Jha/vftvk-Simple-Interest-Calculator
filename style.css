@@ -1,32 +1,22 @@
-body{
-    background-color: black;
-    min-width: 100%;
+body {
+    background-color:black; 
+    font:arial;
     }
 h1{
-    
-    font-size:2.5em;
-    font-weight:bold;
-    color:gray;
+color:grey; 
+font:verdana;
+}
+.maindiv {
+background-color:white; 
+color:black; 
+width:400px; 
+padding:20px; 
+border-radius:25px;
+margin: auto;
 
 }
 
-#calculator{
-    width:500px;
-    padding:20px;
-    background-color: white;
-    border-radius: 25px;
-    margin: 100px auto;
+div {
+margin:auto;
+width:50%;
 }
-form{
-
-    width:400px;
-    margin-left:100px;
-}
-label{
-    width: 100px;
-    display:inline-block;
-    
-}
-#amount::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
