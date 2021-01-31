@@ -1,34 +1,24 @@
-
-  function rate(){
-    var ratevalue=document.getElementById("interestRateate");
-    document.getElementById("r").innerHTML=ratevalue.value+"%";
-  }
-
-  function compute(){
-    var ratevalue=parseFloat(document.getElementById("interestRateate").value);
-    var principal=parseFloat(document.getElementById("amount").value);
-    var time=parseFloat(document.getElementById("nberOfYears").value);
-    var total= parseFloat(principal*(1+((ratevalue/100)*(time))));
-    if(document.getElementById("amount").value==""){
-      alert("Please enter the principal amount");
-    }
-    var today=new Date();
-    var year=today.getFullYear();
-    time+=year;
-    var sortie="If you deposit ";
-    sortie+=principal;
-
-    sortie+=" RWF at an interest rate of "
-    sortie+=ratevalue;
-    sortie+="%";
-
-    sortie+=" You will receive an amount of ";
-    sortie+=total;
-
-    sortie+=" RWF in the year ";
-    sortie+=time
+function compute()
+{
     
-    document.getElementById("resultat").innerHTML=sortie;
-    }
-
-  
+    principal = document.getElementById("principal").value;
+     if ((principal<=0)) 
+    {
+    alert("Enter a positive number");
+    return false;
+     }
+    
+    rate = document.getElementById("rate").value;
+    
+    years = document.getElementById("years").value;
+    
+    var interest = (principal*years*rate)/100;
+    var newyears= +2020 + +years;
+    
+    document.getElementById("result").innerHTML = "If you deposit " +principal +",<br/> at an interest rate of " +rate +"%,<br/> you will receive an amount of "+interest+",<br/> in the year "+newyears ;
+    
+}
+function showVal(value)
+{
+    document.getElementById("dissplay").innerHTML = value +"%";
+}
